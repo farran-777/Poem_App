@@ -21,7 +21,7 @@
             android:textStyle="bold"
             android:textSize="50sp"
             android:fontFamily="@font/kaushanscript_regular"
-            android:textColor="#F4E008"
+            android:textColor="#EB910A"
             android:gravity="center">
 
         </TextView>
@@ -56,15 +56,6 @@
                 android:drawableStart="@drawable/sheep_vector"
                  />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:text="GALLERY"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -86,18 +77,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/star_vector"
+                    android:drawableStart="@drawable/star"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="GALLERY"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -122,15 +105,7 @@
                     android:drawableStart="@drawable/humpty"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="GALLERY"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -152,19 +127,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="65dp"
-                    android:paddingTop="55dp"
+                    android:drawableStart="@drawable/bus"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="GALLERY"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -186,19 +151,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="65dp"
-                    android:paddingTop="55dp"
+                    android:drawableStart="@drawable/abc"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="GALLERY"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
@@ -220,19 +176,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="65dp"
-                    android:paddingTop="55dp"
+                   android:drawableStart="@drawable/monkey"
                     />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_marginTop="5dp"
-                    android:text="GALLERY"
-                    android:textColor="@color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
