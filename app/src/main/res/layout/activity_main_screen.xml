@@ -41,6 +41,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="20dp"
         app:cardElevation="4dp"
+        android:id="@+id/card_sheep"
         android:backgroundTint="#B9F2B3">
 
         <LinearLayout
@@ -52,7 +53,6 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:drawableStart="@drawable/sheep_vector"
                  />
 
@@ -61,6 +61,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="165dp"
             android:layout_height="165dp"
+            android:id="@+id/card_star"
             android:layout_margin="10dp"
             android:layout_gravity="center"
             app:cardBackgroundColor="@color/white"
@@ -77,6 +78,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:drawableStart="@drawable/star"
                     />
 
