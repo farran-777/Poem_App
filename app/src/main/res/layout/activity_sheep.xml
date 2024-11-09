@@ -6,29 +6,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Sheep"
-    android:orientation="vertical"
-    android:background="@drawable/bgsheep"
-    >
+    android:background="@drawable/bgsheep">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnsheep"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Baa, baa, black sheep, have you any wool?
-                                  Yes, sir, yes, sir, three bags full
-                                                One for the master, one for the dame
-                                                One for the little boy who lives down the lane
-                                                Baa, baa, black sheep, have you any wool?
-                                                    Yes, sir, yes, sir, three bags full"
-            android:textSize="35dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="220dp"
+            android:drawableEnd="@drawable/play_24"
+            android:backgroundTint="@color/lightseablue"
+            android:contentDescription="Play Sheep Song" />
+
+        <!-- TextView with lyrics -->
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Baa, baa, black sheep, have you any wool?\nYes, sir, yes, sir, three bags full\nOne for the master, one for the dame\nOne for the little boy who lives down the lane\nBaa, baa, black sheep, have you any wool?\nYes, sir, yes, sir, three bags full"
+            android:textSize="35sp"
             android:gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/kaushanscript_regular"
-            android:textColor="@color/darkblue"    />
+            android:textColor="@color/darkblue" />
+
     </LinearLayout>
 
 </ScrollView>

@@ -7,70 +7,98 @@
     android:layout_height="match_parent"
     tools:context=".twinkle_star"
     android:orientation="vertical"
-    android:background="@drawable/bg2"
-    >
-    <TextView
-        android:layout_marginTop="100sp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Twinkle Twinkle, Little Star"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/kaushanscript_regular"
-        android:textColor="#E91E63"/>
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="How I wonder what you are"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/kaushanscript_regular"
-        android:textColor="#E91E63"/>
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Up above the world so high"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/kaushanscript_regular"
-        android:textColor="#E91E63"/>
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Like a diamond in the sky"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/kaushanscript_regular"
-        android:textColor="#E91E63"/>
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Twinkle Twinkle, Little Star"
-        android:textSize="35dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:fontFamily="@font/kaushanscript_regular"
-        android:textColor="#E91E63"/>
-    <TextView
-        android:layout_marginTop="5dp"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="How I wonder what you are!"
-    android:textSize="35dp"
-    android:gravity="center"
-    android:textStyle="bold"
-    android:fontFamily="@font/kaushanscript_regular"
-    android:textColor="#E91E63"    />
+    android:background="@drawable/bg2">
 
+    <!-- Button with improved margin and content description -->
+    <Button
+        android:id="@+id/btntwinkle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="220dp"
+        android:drawableEnd="@drawable/play_24"
+        android:backgroundTint="@color/lightpink"
+        android:contentDescription="Play Song"/>
 
+    <!-- ScrollView to make lyrics scrollable if necessary -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <!-- TextViews with improved text size (sp) -->
+            <TextView
+                android:layout_marginTop="40sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Twinkle Twinkle, Little Star"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How I wonder what you are"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Up above the world so high"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Like a diamond in the sky"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Twinkle Twinkle, Little Star"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="How I wonder what you are!"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kaushanscript_regular"
+                android:textColor="#E91E63"/>
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
