@@ -9,30 +9,20 @@
     android:orientation="vertical"
     android:background="@drawable/bg2">
 
-    <!-- Button with improved margin and content description -->
     <Button
-        android:id="@+id/btntwinkle"
-        android:layout_width="match_parent"
+        android:id="@+id/btn_star"
+        android:layout_marginHorizontal="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="220dp"
-        android:drawableEnd="@drawable/play_24"
-        android:backgroundTint="@color/lightpink"
-        android:contentDescription="Play Song"/>
-
-    <!-- ScrollView to make lyrics scrollable if necessary -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        android:text="PLAY"
+        android:drawableStart="@drawable/play_24"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- TextViews with improved text size (sp) -->
+
             <TextView
                 android:layout_marginTop="40sp"
                 android:layout_width="match_parent"
@@ -100,5 +90,19 @@
                 android:textColor="#E91E63"/>
 
         </LinearLayout>
-    </ScrollView>
+    <FrameLayout
+        android:layout_marginTop="230dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/windowBackground"
+            app:menu="@menu/bottom_navigation" />
+
+
+    </FrameLayout>
 </LinearLayout>

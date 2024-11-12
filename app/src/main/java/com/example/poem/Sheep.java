@@ -17,17 +17,17 @@ public class Sheep extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheep);
 
-        btnSheep = findViewById(R.id.btnsheep);
+        btnSheep = findViewById(R.id.btn_sheep);
 
-        // Initialize the MediaPlayer to play the audio from res/raw
-        mediaPlayer = MediaPlayer.create(this, R.raw.sheepsong);  // Ensure you have 'sheepsong.mp3' in res/raw
 
-        // Set the onClickListener for the button
+        mediaPlayer = MediaPlayer.create(this, R.raw.sheepsong);
+
+
         btnSheep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
-                    mediaPlayer.start();  // Start playing the audio
+                    mediaPlayer.start();
                 }
             }
         });
@@ -37,7 +37,7 @@ public class Sheep extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         if (mediaPlayer != null) {
-            mediaPlayer.pause();  // Pause the audio if the activity is paused
+            mediaPlayer.pause();
         }
     }
 
@@ -45,7 +45,7 @@ public class Sheep extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         if (mediaPlayer != null) {
-            mediaPlayer.release();  // Release the MediaPlayer resources when the activity is stopped
+            mediaPlayer.release();
             mediaPlayer = null;
         }
     }
