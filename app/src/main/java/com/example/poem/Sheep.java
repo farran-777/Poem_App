@@ -7,9 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Sheep extends AppCompatActivity {
 
-    private Button btnSheep;
+    private FloatingActionButton btnSheep;
     private MediaPlayer mediaPlayer;
 
     @Override
@@ -17,15 +19,27 @@ public class Sheep extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sheep);
 
-        btnSheep = findViewById(R.id.btn_sheep);
+
+        btnSheep = findViewById(R.id.sheepfab);
+
+        if (btnSheep == null) {
+
+            throw new IllegalStateException("Button 'sheepfab' not found in the layout!");
+        }
 
 
         mediaPlayer = MediaPlayer.create(this, R.raw.sheepsong);
+
+        if (mediaPlayer == null) {
+
+            throw new IllegalStateException("Failed to initialize MediaPlayer!");
+        }
 
 
         btnSheep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if (mediaPlayer != null && !mediaPlayer.isPlaying()) {
                     mediaPlayer.start();
                 }
@@ -36,7 +50,8 @@ public class Sheep extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        if (mediaPlayer != null) {
+
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
         }
     }
@@ -44,6 +59,17 @@ public class Sheep extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
+
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
         if (mediaPlayer != null) {
             mediaPlayer.release();
             mediaPlayer = null;

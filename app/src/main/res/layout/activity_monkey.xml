@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sheep"
+    android:orientation="vertical"
+    android:background="@drawable/bg6">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="#E9E095"
+        android:id="@+id/btmnav">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation"
+            android:background="#E9E095"
+            />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F8A7C2"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/play_24"
+        android:id="@+id/fabmonkey"
+        android:contentDescription="1"
+        app:shapeAppearance="@style/Widget.Material3.CircularProgressIndicator"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Five little monkeys jumping on the bed\nOne fell off and bumped his head\nSo Momma called the doctor and the doctor said\nNo more monkeys jumping on the bed!\nFour little monkeys jumping on the bed\nOne fell off and bumped his head\nSo Momma called the doctor and the doctor said\nNo more monkeys jumping on the bed!
+"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="@font/kaushanscript_regular"
+        android:textColor="@color/darkorange" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

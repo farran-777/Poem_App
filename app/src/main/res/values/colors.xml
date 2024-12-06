@@ -23,4 +23,5 @@
     <color name="lightyellow">#EFDE4D</color>
     <color name="extralightyellow">#F0E47A</color>
     <color name="parrot">#64E455</color>
+    <color name="transparent">#00000000</color>
 </resources>

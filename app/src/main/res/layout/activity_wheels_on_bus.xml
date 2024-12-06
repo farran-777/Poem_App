@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sheep"
+    android:orientation="vertical"
+    android:background="@drawable/bg5">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/extralightseablue"
+        android:id="@+id/btmnav">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation"
+            android:background="@color/extralightseablue"
+            />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/play_24"
+        android:id="@+id/fabwheels"
+        android:contentDescription="1"
+        app:shapeAppearance="@style/Widget.Material3.CircularProgressIndicator"
+        />
+
+    <TextView
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:text="The wheels on the bus go 'round and 'round\n'Round and 'round, 'round and 'round\nThe wheels on the bus go 'round and 'round\nAll day long\nThe horn on the bus goes beep-beep-beep\nBeep-beep-beep, beep-beep-beep\nThe horn on the bus goes beep-beep-beep\nAll day long"
+        android:textStyle="bold"
+        android:fontFamily="@font/kaushanscript_regular"
+        android:textColor="@color/lighttaxi" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

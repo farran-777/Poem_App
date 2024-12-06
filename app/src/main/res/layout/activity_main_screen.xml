@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -8,25 +7,43 @@
     tools:context=".MainScreen"
     android:background="@drawable/bg1">
 
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/extralightseablue"
+        android:id="@+id/btmnav">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation"
+            android:background="@color/extralightseablue"
+            />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/extralightyellow"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/play_24"
+        android:id="@+id/sheepfab"
+        android:contentDescription="1"
+        app:shapeAppearance="@style/Widget.Material3.CircularProgressIndicator"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:layout_marginTop="80dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/extralightseablue"
-                android:title="POEMS"
-                android:titleTextColor="#FFFFFF"
-                app:navigationIcon="@drawable/home"
-                />
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -35,42 +52,38 @@
                 android:textSize="40sp"
                 android:fontFamily="@font/kaushanscript_regular"
                 android:textColor="#EB910A"
-                android:gravity="center"/>
+                android:gravity="center" />
 
             <GridLayout
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:rowCount="3"
                 android:columnCount="2">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="165dp"
-                    android:layout_height="165dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginEnd="5dp"
-                    android:layout_gravity="center"
-                    app:cardBackgroundColor="@color/white"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="4dp"
                     android:id="@+id/card_sheep"
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
                     android:backgroundTint="#B9F2B3">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/sheep_vector" />
-                    </LinearLayout>
+                        android:src="@drawable/sheep_vector"
+                        android:contentDescription="Sheep Image"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="165dp"
-                    android:layout_height="165dp"
                     android:id="@+id/card_star"
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="10dp"
                     android:layout_gravity="center"
@@ -78,18 +91,15 @@
                     app:cardCornerRadius="20dp"
                     app:cardElevation="4dp"
                     android:backgroundTint="#F4ED9B">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/star" />
-                    </LinearLayout>
+                        android:src="@drawable/star"
+                        android:contentDescription="Star Image"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_humpty"
                     android:layout_width="165dp"
                     android:layout_height="165dp"
                     android:layout_marginStart="20dp"
@@ -100,18 +110,15 @@
                     app:cardCornerRadius="20dp"
                     app:cardElevation="4dp"
                     android:backgroundTint="#F4ED9B">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/humpty" />
-                    </LinearLayout>
+                        android:src="@drawable/humpty"
+                        android:contentDescription="Humpty Image"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_wheels"
                     android:layout_width="165dp"
                     android:layout_height="165dp"
                     android:layout_marginStart="5dp"
@@ -121,18 +128,15 @@
                     app:cardCornerRadius="20dp"
                     app:cardElevation="4dp"
                     android:backgroundTint="#B9F2B3">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/bus" />
-                    </LinearLayout>
+                        android:src="@drawable/bus"
+                        android:contentDescription="Bus Image"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_abc"
                     android:layout_width="165dp"
                     android:layout_height="165dp"
                     android:layout_marginStart="20dp"
@@ -143,18 +147,15 @@
                     app:cardCornerRadius="20dp"
                     app:cardElevation="4dp"
                     android:backgroundTint="#B9F2B3">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/abc" />
-                    </LinearLayout>
+                        android:src="@drawable/abc"
+                        android:contentDescription="ABC Image"/>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card_monkey"
                     android:layout_width="165dp"
                     android:layout_height="165dp"
                     android:layout_marginStart="5dp"
@@ -165,39 +166,16 @@
                     app:cardCornerRadius="20dp"
                     app:cardElevation="4dp"
                     android:backgroundTint="#F4ED9B">
-                    <LinearLayout
+                    <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableStart="@drawable/monkey" />
-                    </LinearLayout>
+                        android:src="@drawable/monkey"
+                        android:contentDescription="Monkey Image"/>
                 </androidx.cardview.widget.CardView>
-
             </GridLayout>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:id="@+id/bottom_navigation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="?android:attr/windowBackground"
-                    app:menu="@menu/drawer_menu" />
-            </FrameLayout>
-
         </LinearLayout>
+
+
     </ScrollView>
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@id/drawer_layout"
-        app:menu="@menu/drawer_menu" />
-
-</androidx.drawerlayout.widget.DrawerLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

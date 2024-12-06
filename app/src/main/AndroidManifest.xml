@@ -6,12 +6,29 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/abcicon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Poem"
         tools:targetApi="31">
+        <activity
+            android:name=".neww"
+            android:exported="false" />
+        <activity
+            android:name=".tryy"
+            android:exported="false" />
+        <activity
+            android:name=".Monkey"
+            android:exported="false" />
+        <activity
+            android:name=".ABC"
+            android:exported="false" />
+        <activity
+            android:name=".Wheels_On_Bus"
+            android:exported="false" />
+        <activity
+            android:name=".Humpty_Dumpty"
+            android:exported="false" />
         <activity
             android:name=".Sheep"
             android:exported="false" />
